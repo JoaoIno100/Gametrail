@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gametrail - Atualizar publicação</title>
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    {{template "cabecalho"}}
+
+    <div class="container-fluid">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Atualizar Publicação</h3>
+                <div>
+                    <label for="titulo" class="form-label">Título</label>
+                    <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Insira o título da sua publicação" value="{{.Titulo}}">
+                </div>
+                <div>
+                    <label for="conteudo" class="form-label">Conteúdo</label>
+                    <textarea type="text" class="form-control" id="conteudo" name="conteudo" placeholder="Escreva o conteúdo da sua publicação">{{.Conteudo}}</textarea>
+                </div>
+                <div class="mt-2">
+                    <button id="atualizar-publicacao" class="btn btn-info" data-publicacao-id="{{.ID}}">
+                        Atualizar Publicação
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{template "rodape"}}
+    {{template "scripts"}}
+    <script src="/assets/js/publicacoes.js"></script>
+
+</body>
+
+</html>
